@@ -1,12 +1,14 @@
-package com.example.needholiday
+package com.example.needholiday.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.example.needholiday.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.Theme_NeedHoliday)
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContentView(R.layout.activity_main)
     }
 }
