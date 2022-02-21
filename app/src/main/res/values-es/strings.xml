@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">NeedHoliday</string>
+    <string name="description">Tenemos que asegurarnos de que realmente necesitas un día libre. Haz la prueba para saber si te lo mereces.</string>
+    <string name="en">Inglés</string>
+    <string name="es">Español</string>
+    <string name="uk">Ucranio</string>
+    <string name="de">Alemán</string>
+    <string name="ru">Ruso</string>
+</resources>

@@ -7,6 +7,14 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.needholiday.ui.MainFragment"
-        tools:layout="@layout/fragment_main" />
-
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_to_chooseLanguageBottomSheet"
+            app:destination="@id/chooseLanguageBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/chooseLanguageBottomSheet"
+        android:name="com.example.needholiday.ui.ChooseLanguageBottomSheet"
+        android:label="ChooseLanguageBottomSheet"
+        tools:layout="@layout/bottom_sheet_choose_language" />
 </navigation>

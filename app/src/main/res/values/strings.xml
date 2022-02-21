@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NeedHoliday</string>
+    <string name="description">We need to make sure you really need a day off. Take the test to find out if you deserve it.</string>
+    <string name="en">English</string>
+    <string name="es">Spanish</string>
+    <string name="uk">Ukrainian</string>
+    <string name="de">German</string>
+    <string name="ru">Russian</string>
+
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="app_name">NeedHoliday</string>
+    <string name="description">Мы должны убедится, что вам действительно нужен выходной. Пройдите тест чтобы узнать ли вы его заслуживаете.</string>
+    <string name="en">Английский</string>
+    <string name="es">Испанский</string>
+    <string name="uk">Украинский</string>
+    <string name="de">Немецкий</string>
+    <string name="ru">Русский</string>
 </resources>
