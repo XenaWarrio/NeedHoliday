@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/rg_languages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_middle"
@@ -23,6 +24,7 @@
         app:layout_constraintTop_toBottomOf="@id/btn_cancel">
 
         <RadioButton
+            android:id="@+id/en"
             style="@style/RadioButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +32,7 @@
             android:text="@string/en" />
 
         <RadioButton
+            android:id="@+id/de"
             style="@style/RadioButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,6 +40,7 @@
             android:text="@string/de" />
 
         <RadioButton
+            android:id="@+id/es"
             style="@style/RadioButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,6 +48,7 @@
             android:text="@string/es" />
 
         <RadioButton
+            android:id="@+id/ru"
             style="@style/RadioButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,6 +56,7 @@
             android:text="@string/ru" />
 
         <RadioButton
+            android:id="@+id/uk"
             style="@style/RadioButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

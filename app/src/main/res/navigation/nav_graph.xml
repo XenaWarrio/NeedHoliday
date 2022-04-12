@@ -16,5 +16,9 @@
         android:id="@+id/chooseLanguageBottomSheet"
         android:name="com.example.needholiday.ui.ChooseLanguageBottomSheet"
         android:label="ChooseLanguageBottomSheet"
-        tools:layout="@layout/bottom_sheet_choose_language" />
+        tools:layout="@layout/bottom_sheet_choose_language">
+        <argument
+            android:name="selectedLanguage"
+            app:argType="string" />
+    </dialog>
 </navigation>
