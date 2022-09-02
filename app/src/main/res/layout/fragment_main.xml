@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_small"
         android:layout_marginVertical="@dimen/margin_middle"
-        android:background="@drawable/bg_ripple_yellow"
+        android:background="@drawable/bg_button_green"
+        android:textSize="@dimen/text_size_middle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,4 +25,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_language_change" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/b_pass_test"
+        style="@style/MenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pass_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/b_questions_and_answers"
+        style="@style/MenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/questions_and_answers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_pass_test" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/b_tips_of_day"
+        style="@style/MenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tips_of_the_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_questions_and_answers" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_yellow"
+        android:src="@drawable/ic_palm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

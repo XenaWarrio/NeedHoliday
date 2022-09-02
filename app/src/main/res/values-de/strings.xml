@@ -7,4 +7,9 @@
     <string name="uk">Ukrainisch</string>
     <string name="de">Deutsch</string>
     <string name="ru">Russisch</string>
+    <string name="pass_test">Den Test bestehen</string>
+    <string name="questions_and_answers">Fragen und Antworten</string>
+    <string name="tips_of_the_day">Tipps des Tages</string>
+
+
 </resources>

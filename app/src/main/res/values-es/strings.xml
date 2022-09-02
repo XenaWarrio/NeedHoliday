@@ -7,4 +7,10 @@
     <string name="uk">Ucranio</string>
     <string name="de">Alemán</string>
     <string name="ru">Ruso</string>
+    <string name="pass_test">Aprobar el examen</string>
+    <string name="questions_and_answers">Preguntas y respuestas</string>
+    <string name="tips_of_the_day">Consejos del día</string>
+
+
+
 </resources>

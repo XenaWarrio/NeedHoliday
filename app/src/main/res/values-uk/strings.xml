@@ -7,4 +7,9 @@
     <string name="uk">Українська</string>
     <string name="de">Німецька</string>
     <string name="ru">Російська</string>
+    <string name="pass_test">Пройти тест</string>
+    <string name="questions_and_answers">Питання та відповіді</string>
+    <string name="tips_of_the_day">Поради дня</string>
+
+
 </resources>

@@ -6,5 +6,8 @@
     <string name="uk">Ukrainian</string>
     <string name="de">German</string>
     <string name="ru">Russian</string>
+    <string name="pass_test">Pass the test</string>
+    <string name="questions_and_answers">Questions and answers</string>
+    <string name="tips_of_the_day">Tips of the day</string>
 
 </resources>
