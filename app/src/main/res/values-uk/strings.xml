@@ -10,6 +10,22 @@
     <string name="pass_test">Пройти тест</string>
     <string name="questions_and_answers">Питання та відповіді</string>
     <string name="tips_of_the_day">Поради дня</string>
+    <string name="absolutely_confidential">Абсолютно конфіденційно</string>
+    <string name="will_tell">але ми все одно розповімо твоєму босу</string>
 
+    <string name="question_1">Як часто ви працюєте?</string>
+    <string name="answer_1_1">Не працюю, адже в мене багаті батьки</string>
+    <string name="answer_1_2">Я трудоголік. Працюю 2\-3 рази на тиждень</string>
+    <string name="answer_1_3">Я дуже переробляю. Працюю 5 разів на тиждень</string>
+
+    <string name="question_2">Як ти думаєш, твій бос тупий, як камінь?</string>
+    <string name="answer_2_1">Ні, бос мудрий та найкращий керівник. Я і є бос</string>
+    <string name="answer_2_2">Мабуть бос трохи тупуватий. Адже мене взяли сюди працювати</string>
+    <string name="answer_2_3">Бос дуже тупий. Він/вона/вони навіть думають що Земля кругла.</string>
+
+    <string name="question_3">Хто на вас чекає вдома, коли ви працюєте?</string>
+    <string name="answer_3_1">кохана людина / член сім\'ї, якого мені шкода вигнати</string>
+    <string name="answer_3_2">кіт / собака / бабуся</string>
+    <string name="answer_3_3">авокадо / крикливий сусід якого я ненавиджу</string>
 
 </resources>

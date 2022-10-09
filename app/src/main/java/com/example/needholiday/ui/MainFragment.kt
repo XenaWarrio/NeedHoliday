@@ -19,10 +19,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         _binding = FragmentMainBinding.bind(view)
 
         setUpViews()
-        setUpListeners()
+        setListeners()
+        setClickListeners()
     }
 
-    private fun setUpListeners() {
+    private fun setListeners() {
         setFragmentResultListener(LANGUAGE_CODE) { _, bundle ->
             bundle.getString(LANGUAGE_CODE)?.let {
                 binding.btnLanguageChange.text = it
@@ -41,6 +42,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                         prefs.language
                     )
                 )
+            }
+        }
+    }
+
+    private fun setClickListeners() {
+        with(binding) {
+            bPassTest.setOnClickListener {
+                findNavController().navigate(MainFragmentDirections.actionMainFragmentToQuizFragment())
             }
         }
     }

@@ -10,7 +10,22 @@
     <string name="pass_test">Aprobar el examen</string>
     <string name="questions_and_answers">Preguntas y respuestas</string>
     <string name="tips_of_the_day">Consejos del día</string>
+    <string name="absolutely_confidential">Absolutamente confidencial</string>
+    <string name="will_tell">pero le diremos a tu jefe de todos modos</string>
 
+    <string name="question_1">¿Qué tan seguido trabajas?</string>
+    <string name="answer_1_1">No trabajo porque mis padres son ricos.</string>
+    <string name="answer_1_2">Soy un adicto al trabajo. trabajo 2 o 3 veces por semana</string>
+    <string name="answer_1_3">Proceso mucho. trabajo 5 veces a la semana</string>
 
+    <string name="question_2">¿Crees que tu jefe es tonto como una roca?</string>
+    <string name="answer_2_1">No, el jefe es sabio y el mejor líder. yo soy el jefe</string>
+    <string name="answer_2_2">Tal vez el jefe es un poco tonto. Después de todo, me trajeron aquí para trabajar.</string>
+    <string name="answer_2_3">El jefe es definitivamente muy tonto. Incluso piensan que la Tierra es redonda.</string>
+
+    <string name="question_3">¿Quién te espera en casa cuando trabajas?</string>
+    <string name="answer_3_1">Sun ser querido/miembro de la familia a quien siento despedir</string>
+    <string name="answer_3_2">gato / perro / abuela</string>
+    <string name="answer_3_3">aguacate / vecino gritón a quien odio</string>
 
 </resources>

@@ -10,6 +10,22 @@
     <string name="pass_test">Den Test bestehen</string>
     <string name="questions_and_answers">Fragen und Antworten</string>
     <string name="tips_of_the_day">Tipps des Tages</string>
+    <string name="absolutely_confidential">Absolut vertraulich</string>
+    <string name="will_tell">aber wir werden es Ihrem Chef trotzdem sagen</string>
 
+    <string name="question_1">Wie oft arbeitest du?</string>
+    <string name="answer_1_1">Ich arbeite nicht, weil meine Eltern reich sind</string>
+    <string name="answer_1_2">Ich bin ein Workaholic. Ich arbeite 2\-3 mal die Woche</string>
+    <string name="answer_1_3">Ich verarbeite viel. Ich arbeite 5 mal die Woche</string>
+
+    <string name="question_2">Glaubst du, dein Chef ist dumm wie ein Stein?</string>
+    <string name="answer_2_1">Nein, der Chef ist weise und der beste Anführer. ich bin der Boss</string>
+    <string name="answer_2_2">Vielleicht ist der Chef ein bisschen doof. Schließlich haben sie mich zur Arbeit hierher gebracht</string>
+    <string name="answer_2_3">Der Chef ist definitiv sehr dumm. Er/sie/sie denkt sogar, dass die Erde rund ist.</string>
+
+    <string name="question_3">Wer wartet zu Hause auf Sie, wenn Sie arbeiten?</string>
+    <string name="answer_3_1">ein geliebter Mensch/ein Familienmitglied, das ich leider wegschicke</string>
+    <string name="answer_3_2">Katze / Hund / Großmutter</string>
+    <string name="answer_3_3">Avocado / schreiender Nachbar, den ich hasse</string>
 
 </resources>

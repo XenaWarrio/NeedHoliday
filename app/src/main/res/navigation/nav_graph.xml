@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_to_chooseLanguageBottomSheet"
             app:destination="@id/chooseLanguageBottomSheet" />
+        <action
+            android:id="@+id/action_mainFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
     <dialog
         android:id="@+id/chooseLanguageBottomSheet"
@@ -21,4 +24,22 @@
             android:name="selectedLanguage"
             app:argType="string" />
     </dialog>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.needholiday.ui.quiz.QuizFragment"
+        android:label="QuizFragment"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.needholiday.ui.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

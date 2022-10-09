@@ -9,5 +9,22 @@
     <string name="pass_test">Pass the test</string>
     <string name="questions_and_answers">Questions and answers</string>
     <string name="tips_of_the_day">Tips of the day</string>
+    <string name="absolutely_confidential">Absolutely confidential</string>
+    <string name="will_tell">but we\'ll tell your boss anyway</string>
+
+    <string name="question_1">How often do you work?</string>
+    <string name="answer_1_1">I don\'t work because my parents are rich</string>
+    <string name="answer_1_2">I am a workaholic. I work 2\-3 times a week</string>
+    <string name="answer_1_3">I process a lot. I work 5 times a week</string>
+
+    <string name="question_2">Do you think your boss is dumb as a rock?</string>
+    <string name="answer_2_1">No, the boss is wise and the best leader. I am the boss</string>
+    <string name="answer_2_2">Maybe the boss is a bit dumb. After all, they took me here to work</string>
+    <string name="answer_2_3">The boss is definitely very dumb. He/she/they even think that the Earth is round.</string>
+
+    <string name="question_3">Who is waiting for you at home when you work?</string>
+    <string name="answer_3_1">a loved one/family member whom I feel sorry to send away</string>
+    <string name="answer_3_2">cat / dog / grandmother</string>
+    <string name="answer_3_3">avocado / screaming neighbor whom I hate</string>
 
 </resources>
