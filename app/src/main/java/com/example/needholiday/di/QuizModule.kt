@@ -9,5 +9,5 @@ import javax.inject.Singleton
 class QuizModule {
     @Provides
     @Singleton
-    fun provideQuizRepository() = QuizRepository
+    fun provideQuizRepository() = QuizRepository()
 }
