@@ -5,9 +5,9 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.needholiday.App
 import com.example.needholiday.R
 import com.example.needholiday.databinding.FragmentQuizBinding
+import com.example.needholiday.di.DaggerAppComponent
 import com.example.needholiday.utils.invisible
 import com.example.needholiday.utils.visible
 import kotlinx.coroutines.delay
@@ -24,10 +24,11 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentQuizBinding.bind(view)
-        viewModel = QuizViewModel((requireActivity().application as App).quizRepository)
+        DaggerAppComponent.create().inject(this)
 
+        _binding = FragmentQuizBinding.bind(view)
         viewModel.getQuizzes()
+
         setListeners()
         setClickListeners()
     }
