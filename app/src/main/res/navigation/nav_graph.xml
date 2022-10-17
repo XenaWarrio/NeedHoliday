@@ -35,11 +35,14 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.needholiday.ui.ResultFragment"
+        android:name="com.example.needholiday.ui.result.ResultFragment"
         android:label="ResultFragment"
         tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="totalScores"
+            app:argType="integer" />
     </fragment>
 </navigation>

@@ -25,7 +25,7 @@
 
         <RadioButton
             android:id="@+id/en"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonLanguageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@drawable/bg_language_radio_btn"
@@ -33,7 +33,7 @@
 
         <RadioButton
             android:id="@+id/de"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonLanguageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@drawable/bg_language_radio_btn"
@@ -41,7 +41,7 @@
 
         <RadioButton
             android:id="@+id/es"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonLanguageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@drawable/bg_language_radio_btn"
@@ -49,7 +49,7 @@
 
         <RadioButton
             android:id="@+id/ru"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonLanguageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@drawable/bg_language_radio_btn"
@@ -57,7 +57,7 @@
 
         <RadioButton
             android:id="@+id/uk"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonLanguageStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@drawable/bg_language_radio_btn"

@@ -9,6 +9,7 @@ import com.example.needholiday.R
 import com.example.needholiday.constants.LANGUAGE_CODE
 import com.example.needholiday.databinding.FragmentMainBinding
 import com.example.needholiday.prefs
+import com.example.needholiday.utils.verifyStoragePermissions
 
 class MainFragment : Fragment(R.layout.fragment_main) {
     private var _binding: FragmentMainBinding? = null
@@ -21,6 +22,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         setUpViews()
         setListeners()
         setClickListeners()
+
+        requireActivity().verifyStoragePermissions()
     }
 
     private fun setListeners() {
