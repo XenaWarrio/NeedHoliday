@@ -46,7 +46,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
     }
 
     private fun  openFile() {
-            findNavController().navigate(ResultFragmentDirections.actionResultFragmentToOpenFileBottomSheet("file://"+fileTest!!.absolutePath))
+        findNavController().navigate(ResultFragmentDirections.actionResultFragmentToOpenFileBottomSheet("file://"+fileTest!!.absolutePath))
     }
 
     private fun shareFile() {
@@ -67,7 +67,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         startActivity(intent)
     }
     private fun saveFile() {
-        val path = Environment.getExternalStorageDirectory().path
+        val path = requireContext().cacheDir?.path
         var fileName = "Need holiday result : ${
             DateFormat.format(
                 "dd_MM_yyyy_hh_mm_ss",
@@ -78,7 +78,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         val file = File(path, fileName)
         fileTest = file
         viewModel.filePath = file.path
-        binding.tvResult.text = "${file.path}"
+        binding.tvResult.text = file.path
         binding.bOpenFile.visible()
 
         try {
