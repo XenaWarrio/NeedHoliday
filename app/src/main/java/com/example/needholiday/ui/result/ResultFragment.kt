@@ -1,15 +1,15 @@
 package com.example.needholiday.ui.result
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.text.format.DateFormat
-import android.util.Log
 import android.view.View
+import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.needholiday.R
 import com.example.needholiday.databinding.FragmentResultBinding
@@ -45,22 +45,26 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         }
     }
 
-    private fun openFile() {
-        try {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.addCategory(Intent.CATEGORY_BROWSABLE)
-            val s = FileProvider.getUriForFile(
-                requireContext(),
-                requireContext().applicationContext.packageName + ".provider",
-                fileTest!!
-            )
-            intent.setDataAndType(s, "text/html")
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            startActivity(intent)
-        } catch (e: ActivityNotFoundException) {
-            Log.e("FILE_ERROR", "ActivityNotFoundException")
-        }
+    private fun  openFile() {
+            findNavController().navigate(ResultFragmentDirections.actionResultFragmentToOpenFileBottomSheet("file://"+fileTest!!.absolutePath))
+    }
+
+    private fun shareFile() {
+        val fileUrl = fileTest!!.path
+
+        val uri = FileProvider.getUriForFile(
+            requireContext(),
+            requireContext().applicationContext.packageName + ".provider",
+            fileTest!!
+        )
+
+        val intent = ShareCompat.IntentBuilder.from(requireActivity())
+            .setType("application/${fileUrl.substringAfterLast(".")}")
+            .setStream(uri)
+            .createChooserIntent()
+            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        startActivity(intent)
     }
     private fun saveFile() {
         val path = Environment.getExternalStorageDirectory().path

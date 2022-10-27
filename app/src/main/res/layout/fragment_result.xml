@@ -52,8 +52,6 @@
         android:paddingHorizontal="@dimen/padding_large"
         android:paddingVertical="@dimen/padding_middle"
         android:text="Open file"
-        android:visibility="invisible"
-        tools:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPath" />

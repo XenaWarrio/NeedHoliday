@@ -44,5 +44,18 @@
         <argument
             android:name="totalScores"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_openFileBottomSheet"
+            app:destination="@id/openFileBottomSheet" />
     </fragment>
+    <dialog
+        android:id="@+id/openFileBottomSheet"
+        android:name="com.example.needholiday.ui.result.OpenFileBottomSheet"
+        android:label="OpenFileBottomSheet"
+        tools:layout="@layout/bottom_sheet_open_file">
+
+        <argument
+            android:name="fileUri"
+            app:argType="string" />
+    </dialog>
 </navigation>
