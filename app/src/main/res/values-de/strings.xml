@@ -28,4 +28,8 @@
     <string name="answer_3_2">Katze / Hund / Großmutter</string>
     <string name="answer_3_3">Avocado / schreiender Nachbar, den ich hasse</string>
 
+    <string name="open_file">Datei öffnen</string>
+    <string name="share_file">Datei teilen</string>
+    <string name="your_result_is_ready">Ihr Ergebnis ist fertig</string>
+
 </resources>

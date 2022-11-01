@@ -2,7 +2,6 @@ package com.example.needholiday.ui.result
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Environment
 import android.text.format.DateFormat
 import android.view.View
 import androidx.core.app.ShareCompat
@@ -33,29 +32,62 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
             "</html>"
 
     private val viewModel: ResultViewModel by viewModels()
-    var fileTest: File? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentResultBinding.bind(view)
-        binding.tvResult.text = "${navArgs.totalScores}"
+
+        setUpUi()
         saveFile()
+    }
+
+    private fun setUpUi() {
         binding.bOpenFile.setOnClickListener {
             openFile()
         }
+
+        binding.bShareFile.setOnClickListener {
+            shareFile()
+        }
     }
 
-    private fun  openFile() {
-        findNavController().navigate(ResultFragmentDirections.actionResultFragmentToOpenFileBottomSheet("file://"+fileTest!!.absolutePath))
+    private fun saveFile() {
+        val path = requireContext().cacheDir?.path
+        val fileName = "Need holiday result : ${
+            DateFormat.format(
+                "dd_MM_yyyy_hh_mm_ss",
+                System.currentTimeMillis()
+            )
+        }.html"
+        viewModel.file = File(path, fileName)
+
+        try {
+            val out = FileOutputStream(viewModel.file)
+            val data = htmlTest.toByteArray()
+            out.write(data)
+            out.close()
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun openFile() {
+        findNavController().navigate(
+            ResultFragmentDirections.actionResultFragmentToOpenFileBottomSheet(
+                "file://" + viewModel.file!!.absolutePath
+            )
+        )
     }
 
     private fun shareFile() {
-        val fileUrl = fileTest!!.path
+        val fileUrl = viewModel.file?.path ?: return
 
         val uri = FileProvider.getUriForFile(
             requireContext(),
             requireContext().applicationContext.packageName + ".provider",
-            fileTest!!
+            viewModel.file!!
         )
 
         val intent = ShareCompat.IntentBuilder.from(requireActivity())
@@ -66,32 +98,14 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
 
         startActivity(intent)
     }
-    private fun saveFile() {
-        val path = requireContext().cacheDir?.path
-        var fileName = "Need holiday result : ${
-            DateFormat.format(
-                "dd_MM_yyyy_hh_mm_ss",
-                System.currentTimeMillis()
-            )
-        }"
-        fileName = "$fileName.html"
-        val file = File(path, fileName)
-        fileTest = file
-        viewModel.filePath = file.path
-        binding.tvResult.text = file.path
-        binding.bOpenFile.visible()
 
-        try {
-            val out = FileOutputStream(file)
-            val data = htmlTest.toByteArray()
-            out.write(data)
-            out.close()
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        } catch (e: IOException) {
-            e.printStackTrace()
+    private fun showButtons() {
+        with(binding) {
+            bOpenFile.visible()
+            bShareFile.visible()
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

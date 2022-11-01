@@ -27,4 +27,9 @@
     <string name="answer_3_2">cat / dog / grandmother</string>
     <string name="answer_3_3">avocado / screaming neighbor whom I hate</string>
 
+    <string name="open_file">Open file</string>
+    <string name="share_file">Share file</string>
+    <string name="your_result_is_ready">Your result is ready</string>
+
+
 </resources>

@@ -28,4 +28,7 @@
     <string name="answer_3_2">кот / собака / бабушка</string>
     <string name="answer_3_3">авокадо / орущий сосед которого я ненавижу</string>
 
+    <string name="open_file">Открыть файл</string>
+    <string name="share_file">Поделиться файлом</string>
+    <string name="your_result_is_ready">Ваш результат готов</string>
 </resources>

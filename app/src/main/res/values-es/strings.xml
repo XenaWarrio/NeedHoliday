@@ -28,4 +28,7 @@
     <string name="answer_3_2">gato / perro / abuela</string>
     <string name="answer_3_3">aguacate / vecino gritón a quien odio</string>
 
+    <string name="open_file">Abrir documento</string>
+    <string name="share_file">Recurso compartido de archivosn</string>
+    <string name="your_result_is_ready">Tu resultado está listo</string>
 </resources>
