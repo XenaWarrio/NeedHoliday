@@ -6,11 +6,10 @@ import android.text.format.DateFormat
 import android.view.View
 import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.needholiday.R
+import com.example.needholiday.BaseFragment
 import com.example.needholiday.databinding.FragmentResultBinding
 import com.example.needholiday.utils.visible
 import java.io.File
@@ -19,10 +18,7 @@ import java.io.FileOutputStream
 import java.io.IOException
 
 
-class ResultFragment : Fragment(R.layout.fragment_result) {
-    private var _binding: FragmentResultBinding? = null
-    private val binding get() = _binding!!
-
+class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding::inflate) {
     private val navArgs: ResultFragmentArgs by navArgs()
     private val htmlTest = "<html>" +
             "<body>" +
@@ -35,7 +31,6 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentResultBinding.bind(view)
 
         setUpUi()
         saveFile()
@@ -104,10 +99,5 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
             bOpenFile.visible()
             bShareFile.visible()
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }

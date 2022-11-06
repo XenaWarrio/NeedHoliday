@@ -2,10 +2,9 @@ package com.example.needholiday.ui.quiz
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.needholiday.R
+import com.example.needholiday.BaseFragment
 import com.example.needholiday.databinding.FragmentQuizBinding
 import com.example.needholiday.di.DaggerAppComponent
 import com.example.needholiday.utils.gone
@@ -15,9 +14,7 @@ import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 import javax.inject.Inject
 
-class QuizFragment : Fragment(R.layout.fragment_quiz) {
-    private var _binding: FragmentQuizBinding? = null
-    private val binding get() = _binding!!
+class QuizFragment : BaseFragment<FragmentQuizBinding>(FragmentQuizBinding::inflate) {
 
     @Inject
     lateinit var viewModel: QuizViewModel
@@ -26,7 +23,6 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
         super.onViewCreated(view, savedInstanceState)
         DaggerAppComponent.create().inject(this)
 
-        _binding = FragmentQuizBinding.bind(view)
         viewModel.getQuizzes()
 
         setUpUi()
@@ -111,7 +107,7 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
         }
     }
 
-    fun setNextButtonAvailability(availability: Boolean) {
+   private fun setNextButtonAvailability(availability: Boolean) {
         binding.bNext.apply {
             isChecked = availability
             isClickable = availability
@@ -136,10 +132,5 @@ class QuizFragment : Fragment(R.layout.fragment_quiz) {
                 null
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }

@@ -2,9 +2,7 @@ package com.example.needholiday.ui.result
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -12,15 +10,15 @@ import android.webkit.WebViewClient
 import android.widget.FrameLayout
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.needholiday.BaseBottomSheet
 import com.example.needholiday.databinding.BottomSheetOpenFileBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
-class OpenFileBottomSheet : BottomSheetDialogFragment() {
-    private var _binding: BottomSheetOpenFileBinding? = null
-    private val binding get() = _binding!!
+class OpenFileBottomSheet :
+    BaseBottomSheet<BottomSheetOpenFileBinding>(BottomSheetOpenFileBinding::inflate) {
+
     private val args: OpenFileBottomSheetArgs by navArgs()
 
     override fun onCreateDialog(savedInstanceState: Bundle?) = getStyledDialog(savedInstanceState)
@@ -36,15 +34,6 @@ class OpenFileBottomSheet : BottomSheetDialogFragment() {
             }
         }
         return dialog
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = BottomSheetOpenFileBinding.inflate(inflater, container, false)
-        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -72,7 +61,7 @@ class OpenFileBottomSheet : BottomSheetDialogFragment() {
                     error: WebResourceError?
                 ) {
                     super.onReceivedError(view, request, error)
-                    Log.e("OpenFileBottomSheet", "error: ${error?.description ?: ""}")
+                    Log.e("OpenFileBottomSheet", "error: $error")
                 }
             }
             loadUrl(args.fileUri)

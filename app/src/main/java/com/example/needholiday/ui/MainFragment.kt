@@ -2,22 +2,18 @@ package com.example.needholiday.ui
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
-import com.example.needholiday.R
+import com.example.needholiday.BaseFragment
 import com.example.needholiday.constants.LANGUAGE_CODE
 import com.example.needholiday.databinding.FragmentMainBinding
 import com.example.needholiday.prefs
 import com.example.needholiday.utils.verifyStoragePermissions
 
-class MainFragment : Fragment(R.layout.fragment_main) {
-    private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!
+class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentMainBinding.bind(view)
 
         setUpViews()
         setListeners()
@@ -55,10 +51,5 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 findNavController().navigate(MainFragmentDirections.actionMainFragmentToQuizFragment())
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

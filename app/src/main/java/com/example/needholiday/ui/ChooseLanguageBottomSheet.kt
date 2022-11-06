@@ -1,34 +1,22 @@
 package com.example.needholiday.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.needholiday.BaseBottomSheet
 import com.example.needholiday.constants.LANGUAGE_CODE
 import com.example.needholiday.databinding.BottomSheetChooseLanguageBinding
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class ChooseLanguageBottomSheet : BottomSheetDialogFragment() {
-    private var _binding: BottomSheetChooseLanguageBinding? = null
-    private val binding get() = _binding!!
+class ChooseLanguageBottomSheet :
+    BaseBottomSheet<BottomSheetChooseLanguageBinding>(BottomSheetChooseLanguageBinding::inflate) {
 
     private val args: ChooseLanguageBottomSheetArgs by navArgs()
     private val check: (radioButton: RadioButton) -> Unit = { rb -> rb.isChecked = true }
     private val close = { findNavController().popBackStack() }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = BottomSheetChooseLanguageBinding.inflate(inflater, container, false)
-        return binding.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,10 +55,5 @@ class ChooseLanguageBottomSheet : BottomSheetDialogFragment() {
                 else -> {}
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
